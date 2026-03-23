@@ -24,7 +24,6 @@ function incrementScore(){
     return score++;
 }
 
-
 function addItem(){
     document.getElementById("Item1").addEventListener("click", () => {buyItem(autoclicker1);});
     document.getElementById("Item2").addEventListener("click", () => {buyItem(autoclicker2);});
