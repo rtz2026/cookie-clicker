@@ -11,14 +11,14 @@
 
 #store {
   display: flex;
-  justify-content: center; /* vízszintesen középre */
+  justify-content: center;
 }
 
 #store table {
-  border-collapse: collapse; /* opcionális, hogy ne legyen dupla vonal */
+  border-collapse: collapse;
 }
 
 #store th {
-  text-align: center; /* szöveget középre a cellában */
-  padding: 8px 16px;  /* opcionális, hogy legyen szellősebb */
+  text-align: center;
+  padding: 8px 16px;
 }
