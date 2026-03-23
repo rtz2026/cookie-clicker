@@ -9,13 +9,12 @@ const autoclicker4 = 2;
 const autoclicker5 = 4;
 
 function autoIncrement() {
-    const autoIncrement = 0;
-    while (score>0) {
-        getAutoIncrementAmount(autoIncrement);
-        score=score+autoIncrement;
-        setTimeout(1000);
+    let autoIncrement = 0;
+    autoIncrement = getAutoIncrementAmount(autoIncrement);
+    score = score+autoIncrement;
+    showScore();
+    console.log(score);
     }
-}
 
 function buyItem(itemname) {
   if (score >= itemname * 1000) {
@@ -35,9 +34,10 @@ function getIncrementAmount() {
 }
 
 function getAutoIncrementAmount(autoIncrement) {
-    for (let counter = 0; counter <= inventory.length; counter++) {
+    for (let counter = 0; counter < inventory.length; counter++) {
         autoIncrement = autoIncrement+inventory[counter];
     }
+    return autoIncrement;
 }
 
 function incrementScore() {
@@ -74,6 +74,7 @@ function gameSetup() {
   showScore();
   addClicker();
   addItem();
+  setInterval(() =>{autoIncrement()},1000);
 }
 
 gameSetup();
