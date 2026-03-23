@@ -6,6 +6,7 @@ function addClicker(){
 
 function incrementScore(){
     //let score = getScore();
+    document.getElementById("score").innerHTML = `Score: ${score}`;
     console.log(score);
     return score++;
 }
@@ -20,7 +21,6 @@ function addItem(){
 }
 
 function gameSetup(){
-    document.getElementById("score").innerHTML = "Score: "+score
     addClicker();
     addItem();
 }
