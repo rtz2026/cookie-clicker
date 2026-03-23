@@ -4,3 +4,12 @@
   width: 600px;
   height: 600px;
 }
+
+#score {
+  text-align: center;
+}
+
+#store {
+  text-align: center;
+  margin-top: 20px;
+}
