@@ -5,11 +5,9 @@ function addClicker(){
 }
 
 function incrementScore(){
-    //let score = getScore();
     console.log(score);
     return score++;
 }
-
 
 function addItem(){
     document.getElementById("Item1").addEventListener("click", () => {shopping.buyItem(autoclicker1)})
