@@ -10,6 +10,15 @@
 }
 
 #store {
-  text-align: center;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* vízszintesen középre */
+}
+
+#store table {
+  border-collapse: collapse; /* opcionális, hogy ne legyen dupla vonal */
+}
+
+#store th {
+  text-align: center; /* szöveget középre a cellában */
+  padding: 8px 16px;  /* opcionális, hogy legyen szellősebb */
 }
