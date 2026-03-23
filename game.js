@@ -40,6 +40,7 @@ function addItem(){
 }
 
 function gameSetup(){
+    document.getElementById("score").innerHTML = `Score: ${score}`;
     addClicker();
     addItem();
 }
