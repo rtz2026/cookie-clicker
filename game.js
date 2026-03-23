@@ -9,7 +9,10 @@ const autoclicker4 = 2;
 const autoclicker5 = 4;
 
 function buyItem(itemname) {
-    inventory.push(itemname);
+    if (score>=itemname*1000) {
+        inventory.push(itemname);
+        score=score-itemname*1000;
+    }
     console.log(inventory);
 }
 
