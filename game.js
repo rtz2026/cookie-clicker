@@ -1,4 +1,4 @@
-let score = 0;
+let score = 100;
 
 let inventory = [];
 
@@ -14,6 +14,7 @@ function buyItem(itemname) {
         score=score-itemname*1000;
     }
     console.log(inventory);
+    showScore();
 }
 
 function addClicker(){
@@ -21,14 +22,18 @@ function addClicker(){
 }
 
 function getIncrementAmount(){
-    return inventory.length != 0 ? Math.max(...inventory) : 1;
+    return inventory.length != 0 ? 1 + Math.max(...inventory) : 1;
 }
 
 function incrementScore(){
     const increment = getIncrementAmount();
     score += increment;
     console.log(score);
-    document.getElementById("score").innerHTML = `Score: ${score}`;
+    showScore();
+}
+
+function showScore(){
+    document.getElementById("score").innerHTML = `Score: ${score.toFixed(2)}`;
 }
 
 function addItem(){
@@ -40,7 +45,7 @@ function addItem(){
 }
 
 function gameSetup(){
-    document.getElementById("score").innerHTML = `Score: ${score}`;
+    showScore();
     addClicker();
     addItem();
 }
