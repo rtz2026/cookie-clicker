@@ -8,6 +8,15 @@ const autoclicker3 = 1;
 const autoclicker4 = 2;
 const autoclicker5 = 4;
 
+function autoIncrement() {
+    const autoIncrement = 0;
+    while (score>0) {
+        getAutoIncrementAmount(autoIncrement);
+        score=score+autoIncrement;
+        setTimeout(1000);
+    }
+}
+
 function buyItem(itemname) {
     if (score>=itemname*1000) {
         inventory.push(itemname);
@@ -22,6 +31,12 @@ function addClicker(){
 
 function getIncrementAmount(){
     return inventory.length != 0 ? Math.max(...inventory) : 1;
+}
+
+function getAutoIncrementAmount(autoIncrement) {
+    for (let counter = 0; counter <= inventory.length; counter++) {
+        autoIncrement = autoIncrement+inventory[counter];
+    }
 }
 
 function incrementScore(){
