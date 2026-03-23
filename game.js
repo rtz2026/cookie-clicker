@@ -17,11 +17,15 @@ function addClicker(){
     document.getElementById("cookie").addEventListener("click", () => {incrementScore();});
 }
 
+function getIncrementAmount(){
+    return inventory.length != 0 ? Math.max(...inventory) : 1;
+}
+
 function incrementScore(){
-    //let score = getScore();
-    document.getElementById("score").innerHTML = `Score: ${score}`;
+    const increment = getIncrementAmount();
+    score += increment;
     console.log(score);
-    return score++;
+    document.getElementById("score").innerHTML = `Score: ${score}`;
 }
 
 function addItem(){
