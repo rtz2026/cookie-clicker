@@ -6,7 +6,7 @@ const upgrade3 = 1;
 const upgrade4 = 2;
 const upgrade5 = 4;
 
-function buyItem(itemname, score) {
+export default function buyItem(itemname, score) {
   if (score >= itemname * 1000) {
     inventory.push(itemname);
     score = score - itemname * 1000;
@@ -15,7 +15,7 @@ function buyItem(itemname, score) {
   showScore();
 }
 
-function addItem(score) {
+export default function addItem(score) {
   document.getElementById("Item1").addEventListener("click", () => {
     buyItem(upgrade1, score);
   });
