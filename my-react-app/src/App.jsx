@@ -18,12 +18,15 @@ function App() {
     return inventory.reduce((sum, item) => sum + item.autoPerSecond, 0);
   }, [inventory]);
 
-
+  function handleCookieClick() {
+    console.log(score);
+    setScore(score => score+1);
+  }
 
   return (
     <>
-    <Counter score={score}/>
-    <Cookie />
+    <Counter score={score} />
+    <Cookie onClick={handleCookieClick} />
     <div>
       <AutoClicker rate={autoPerSecond} onTick={handleAutoTick} />
     </div>
