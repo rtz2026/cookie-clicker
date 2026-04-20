@@ -1,6 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
 import './App.css'
 import AutoClicker from './AutoClicker.jsx'
+import Shopping from './Shopping.jsx'
 
 function App() {
 
@@ -25,6 +26,10 @@ function App() {
       <img src="/picture/cookie.png" alt="Cookie" />
     </div>
     <p>Auto/sec: {autoPerSecond.toFixed(2)}</p>
+
+  <div>
+    <Shopping score={score} />
+  </div>
       
     </>
   )

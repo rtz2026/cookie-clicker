@@ -72,7 +72,6 @@ function addItem() {
 
 function gameSetup() {
   showScore();
-  addClicker();
   addItem();
   setInterval(() =>{autoIncrement()},1000);
 }
