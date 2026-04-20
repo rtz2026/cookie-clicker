@@ -18,14 +18,14 @@ function buyItem(itemname, score) {
 }
 
     return (
-        
+
 <div id="store">
   <table>
-    <tr><td id="Item1" onclick="buyItem(upgrade1, score)">Clicker Upgrade 1 (100 Points)<span class="arrow1">⬆️</span></td></tr>
-    <tr><td id="Item2" onclick="buyItem(upgrade2, score)">Clicker Upgrade 2 (500 Points)<span class="arrow2">⬆️</span></td></tr>
-    <tr><td id="Item3" onclick="buyItem(upgrade3, score)">Clicker Upgrade 3 (1000 Points)<span class="arrow3">⬆️</span></td></tr>
-    <tr><td id="Item4" onclick="buyItem(upgrade4, score)">Clicker Upgrade 4 (2000 Points)<span class="arrow4">⬆️</span></td></tr>
-    <tr><td id="Item5" onclick="buyItem(upgrade5, score)">Clicker Upgrade 5 (4000 Points)<span class="arrow5">⬆️</span></td></tr>
+    <tr><td id="Item1" onClick="buyItem(upgrade1, score)">Clicker Upgrade 1 (100 Points)<span>⬆️</span></td></tr>
+    <tr><td id="Item2" onClick="buyItem(upgrade2, score)">Clicker Upgrade 2 (500 Points)<span>⬆️</span></td></tr>
+    <tr><td id="Item3" onClick="buyItem(upgrade3, score)">Clicker Upgrade 3 (1000 Points)<span>⬆️</span></td></tr>
+    <tr><td id="Item4" onClick="buyItem(upgrade4, score)">Clicker Upgrade 4 (2000 Points)<span>⬆️</span></td></tr>
+    <tr><td id="Item5" onClick="buyItem(upgrade5, score)">Clicker Upgrade 5 (4000 Points)<span>⬆️</span></td></tr>
   </table>
 </div>
     )
