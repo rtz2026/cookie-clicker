@@ -1,3 +1,5 @@
+export default function Shopping({ score }) {
+
 let inventory = [];
 
 const upgrade1 = 0.1;
@@ -5,8 +7,6 @@ const upgrade2 = 0.5;
 const upgrade3 = 1;
 const upgrade4 = 2;
 const upgrade5 = 4;
-
-export default function Shopping({ score }) {
 
 function buyItem(itemname, score) {
   if (score >= itemname * 1000) {
@@ -34,9 +34,11 @@ function addItem(score) {
     buyItem(upgrade5, score);
   });
 }
-}
 
 addItem(score);
+
+    return (
+
 
 <div id="store">
   <table>
@@ -47,3 +49,5 @@ addItem(score);
     <tr><td id="Item5">Clicker Upgrade 5 (4000 Points)<span class="arrow5">⬆️</span></td></tr>
   </table>
 </div>
+    )
+}
