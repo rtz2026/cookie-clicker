@@ -17,36 +17,15 @@ function buyItem(itemname, score) {
   showScore();
 }
 
-function addItem(score) {
-  document.getElementById("Item1").onclick = () => {
-    buyItem(upgrade1, score);
-  };
-  document.getElementById("Item2").onclick = () => {
-    buyItem(upgrade2, score);
-  };
-  document.getElementById("Item3").onclick = () => {
-    buyItem(upgrade3, score);
-  };
-  document.getElementById("Item4").onclick = () => {
-    buyItem(upgrade4, score);
-  };
-  document.getElementById("Item5").onclick = () => {
-    buyItem(upgrade5, score);
-  };
-}
-
-addItem(score);
-
     return (
-
-
+        
 <div id="store">
   <table>
-    <tr><td id="Item1">Clicker Upgrade 1 (100 Points)<span class="arrow1">⬆️</span></td></tr>
-    <tr><td id="Item2">Clicker Upgrade 2 (500 Points)<span class="arrow2">⬆️</span></td></tr>
-    <tr><td id="Item3">Clicker Upgrade 3 (1000 Points)<span class="arrow3">⬆️</span></td></tr>
-    <tr><td id="Item4">Clicker Upgrade 4 (2000 Points)<span class="arrow4">⬆️</span></td></tr>
-    <tr><td id="Item5">Clicker Upgrade 5 (4000 Points)<span class="arrow5">⬆️</span></td></tr>
+    <tr><td id="Item1" onclick="buyItem(upgrade1, score)">Clicker Upgrade 1 (100 Points)<span class="arrow1">⬆️</span></td></tr>
+    <tr><td id="Item2" onclick="buyItem(upgrade2, score)">Clicker Upgrade 2 (500 Points)<span class="arrow2">⬆️</span></td></tr>
+    <tr><td id="Item3" onclick="buyItem(upgrade3, score)">Clicker Upgrade 3 (1000 Points)<span class="arrow3">⬆️</span></td></tr>
+    <tr><td id="Item4" onclick="buyItem(upgrade4, score)">Clicker Upgrade 4 (2000 Points)<span class="arrow4">⬆️</span></td></tr>
+    <tr><td id="Item5" onclick="buyItem(upgrade5, score)">Clicker Upgrade 5 (4000 Points)<span class="arrow5">⬆️</span></td></tr>
   </table>
 </div>
     )
