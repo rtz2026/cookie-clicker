@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 import './App.css'
-import './AutoClicker.jsx'
+import AutoClicker from './AutoClicker.jsx'
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
   return (
     <>
     <div>
-      <AutoIncrementer rate={autoPerSecond} onTick={handleAutoTick} />
+      <AutoClicker rate={autoPerSecond} onTick={handleAutoTick} />
     </div>
     <div>
       <h1>Score: {score.toFixed(2)}</h1>
