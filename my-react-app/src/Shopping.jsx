@@ -18,21 +18,21 @@ function buyItem(itemname, score) {
 }
 
 function addItem(score) {
-  document.getElementById("Item1").addEventListener("click", () => {
+  document.getElementById("Item1").onclick = () => {
     buyItem(upgrade1, score);
-  });
-  document.getElementById("Item2").addEventListener("click", () => {
+  };
+  document.getElementById("Item2").onclick = () => {
     buyItem(upgrade2, score);
-  });
-  document.getElementById("Item3").addEventListener("click", () => {
+  };
+  document.getElementById("Item3").onclick = () => {
     buyItem(upgrade3, score);
-  });
-  document.getElementById("Item4").addEventListener("click", () => {
+  };
+  document.getElementById("Item4").onclick = () => {
     buyItem(upgrade4, score);
-  });
-  document.getElementById("Item5").addEventListener("click", () => {
+  };
+  document.getElementById("Item5").onclick = () => {
     buyItem(upgrade5, score);
-  });
+  };
 }
 
 addItem(score);
