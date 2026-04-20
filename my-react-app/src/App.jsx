@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 import './App.css'
+import Counter from './Counter.jsx'
 import Cookie from './Cookie.jsx'
 import AutoClicker from './AutoClicker.jsx'
 import Shopping from './Shopping.jsx'
@@ -17,15 +18,14 @@ function App() {
     return inventory.reduce((sum, item) => sum + item.autoPerSecond, 0);
   }, [inventory]);
 
+
+
   return (
     <>
+    <Counter score={score}/>
     <Cookie />
     <div>
       <AutoClicker rate={autoPerSecond} onTick={handleAutoTick} />
-    </div>
-    <div>
-      <h1>Score: {score.toFixed(2)}</h1>
-      <img src="/picture/cookie.png" alt="Cookie" />
     </div>
     <p>Auto/sec: {autoPerSecond.toFixed(2)}</p>
 
