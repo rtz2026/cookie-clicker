@@ -13,4 +13,3 @@ export default function AutoClicker({ rate, onTick }) {
 
   return null;
 }
-export default AutoClicker
