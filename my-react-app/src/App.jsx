@@ -19,14 +19,13 @@ function App() {
   }, [inventory]);
 
   function handleCookieClick() {
-    console.log(score);
     setScore(score => score+1);
   }
 
   return (
     <>
     <Counter score={score} />
-    <Cookie onClick={handleCookieClick} />
+    <div onClick={()=>handleCookieClick()}><Cookie /></div>
     <div>
       <AutoClicker rate={autoPerSecond} onTick={handleAutoTick} />
     </div>
