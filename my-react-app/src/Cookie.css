@@ -19,7 +19,10 @@
 
   /* The main container */
   #cookie {
+    padding: 100px;
     position: relative;
+    left: 25%;
+    top: 25%;
     border-radius: 50%;
     width: var(--container-size);
     height: var(--container-size);

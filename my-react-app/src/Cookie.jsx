@@ -6,7 +6,7 @@ function Cookie(props) {
   
   return (
     <>
-      <div id="cookie">
+      <div>
         <img src={cookieImg} className="cookie" alt="Cookie" />
       </div>
     </>

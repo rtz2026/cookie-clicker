@@ -8,11 +8,7 @@ import Shopping from './Shopping.jsx'
 
 function App() {
 
-<<<<<<< HEAD
   const [score, setScore] = useState(100000);
-=======
-  const [score, setScore] = useState(10000);
->>>>>>> 0b7e2233fb94baf90dca312cf5d86a00ab914d1e
   const [inventory, setInventory] = useState([]);
   const [manualInventory, setManualInventory] = useState([]);
   const [extraInventory, setExtraInventory] = useState([]);
@@ -33,16 +29,16 @@ function App() {
   return (
     <>
       <Counter score={score} />
-      <div id="cookie" onClick={() => handleCookieClick()}>
-        <Cookie />
-        <Pointer clickerCount={inventory.filter(item => item.autoPerSecond).length}/>
-      </div>
       <div>
         <AutoClicker rate={autoPerSecond} onTick={handleAutoTick} />
       </div>
       <p>Auto/sec: {autoPerSecond.toFixed(2)}</p>
+      <div id="cookie" onClick={() => handleCookieClick()}>
+        <Cookie />
+        <Pointer clickerCount={inventory.filter(item => item.autoPerSecond).length}/>
+      </div>
 
-      <div>
+      <div id="shop">
         <Shopping 
           score={score} 
           setScore={setScore} 
