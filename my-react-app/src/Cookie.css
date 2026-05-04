@@ -1,0 +1,30 @@
+.cookie:active {
+    transform: scale(0.98); /* Scale down to 90% */
+}
+
+:root {
+    --container-size: 300px;
+    --border-radius: 20px;
+    --pointer-size: 20px;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f172a;
+    margin: 0;
+  }
+
+  /* The main container */
+  #cookie {
+    position: relative;
+    border-radius: 50%;
+    width: var(--container-size);
+    height: var(--container-size);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

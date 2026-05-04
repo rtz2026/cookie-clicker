@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import cookieImg from './assets/cookie.png'
+import { useState } from "react";
+import cookieImg from "./assets/cookie.png";
+import "./Cookie.css";
 
-function Cookie() {
-
+function Cookie(props) {
+  
   return (
     <>
-        <div id="cookie">
-            <img src={cookieImg} className="cookie" alt="Cookie" />
-        </div>
+      <div id="cookie">
+        <img src={cookieImg} className="cookie" alt="Cookie" />
+      </div>
     </>
-  )
+  );
 }
 
-export default Cookie
+export default Cookie;

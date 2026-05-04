@@ -2,12 +2,13 @@ import { useCallback, useMemo, useState } from "react";
 import './App.css'
 import Counter from './Counter.jsx'
 import Cookie from './Cookie.jsx'
+import Pointer from './Pointer.jsx'
 import AutoClicker from './AutoClicker.jsx'
 import Shopping from './Shopping.jsx'
 
 function App() {
 
-  const [score, setScore] = useState(100);
+  const [score, setScore] = useState(100000);
   const [inventory, setInventory] = useState([]);
 
   const handleAutoTick = useCallback((amount) => {
@@ -26,7 +27,10 @@ function App() {
   return (
     <>
       <Counter score={score} />
-      <div onClick={() => handleCookieClick()}><Cookie /></div>
+      <div id="cookie" onClick={() => handleCookieClick()}>
+        <Cookie />
+        <Pointer clickerCount={inventory.filter(item => item.autoPerSecond).length}/>
+      </div>
       <div>
         <AutoClicker rate={autoPerSecond} onTick={handleAutoTick} />
       </div>
