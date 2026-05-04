@@ -8,20 +8,26 @@ import Shopping from './Shopping.jsx'
 
 function App() {
 
+<<<<<<< HEAD
   const [score, setScore] = useState(100000);
+=======
+  const [score, setScore] = useState(10000);
+>>>>>>> 0b7e2233fb94baf90dca312cf5d86a00ab914d1e
   const [inventory, setInventory] = useState([]);
+  const [manualInventory, setManualInventory] = useState([]);
+  const [extraInventory, setExtraInventory] = useState([]);
 
   const handleAutoTick = useCallback((amount) => {
-    setScore((prev) => prev + amount);
-  }, []);
+    setScore((prev) => prev + (amount*extraInventory.reduce((product, item) => product * item.extra, 1)));
+  }, [extraInventory]);
 
   const autoPerSecond = useMemo(() => {
-    // This expects objects like { autoPerSecond: 0.1 } in the inventory
-    return inventory.reduce((sum, item) => sum + item.autoPerSecond, 0);
-  }, [inventory]);
+    return inventory.reduce((sum, item) => sum + (item.autoPerSecond*extraInventory.reduce((product, item) => product * item.extra, 1)), 0);
+  }, [inventory, extraInventory]);
 
   function handleCookieClick() {
-    setScore(score => score + 1);
+    const manualPerClick = manualInventory.reduce((sum, item) => sum + item.manualPerClick, 0);
+    setScore(score + ((1 + manualPerClick)*extraInventory.reduce((product, item) => product * item.extra, 1)));
   }
 
   return (
@@ -37,12 +43,15 @@ function App() {
       <p>Auto/sec: {autoPerSecond.toFixed(2)}</p>
 
       <div>
-        {/* Pass state update functions as props to Shopping */}
         <Shopping 
           score={score} 
           setScore={setScore} 
           inventory={inventory} 
+          manualInventory={manualInventory}
+          extraInventory={extraInventory}
           setInventory={setInventory} 
+          setManualInventory={setManualInventory}
+          setExtraInventory={setExtraInventory}
         />
       </div>
     </>
