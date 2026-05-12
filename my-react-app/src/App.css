@@ -7,7 +7,7 @@
   background: var(--accent-bg);
   border: 2px solid transparent;
   transition: border-color 0.3s;
-  margin-top: 24px;
+  margin-top: 150px;
 
   &:hover {
     border-color: var(--accent-border);

@@ -8,7 +8,7 @@ import Shopping from './Shopping.jsx'
 
 function App() {
 
-  const [score, setScore] = useState(100000);
+  const [score, setScore] = useState(1119999999990);
   const [inventory, setInventory] = useState([]);
   const [manualInventory, setManualInventory] = useState([]);
   const [extraInventory, setExtraInventory] = useState([]);
